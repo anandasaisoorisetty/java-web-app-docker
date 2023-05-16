@@ -14,7 +14,7 @@
 <nav class="navbar navbar-inverse navbar-fixed-top">
 	<div class="container">
 		<div class="navbar-header">
-			<a class="navbar-brand" href="#">Project Name</a>
+			<a class="navbar-brand" href="#">Anand Project</a>
 		</div>
 	</div>
 </nav>
@@ -28,7 +28,7 @@
 			</c:if>
 
 			<c:if test="${empty msg}">
-				Welcome Welcome!
+				Welcome to my Page!
 			</c:if>
 		<p>
 			<a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
@@ -40,15 +40,15 @@
 
 	<div class="row">
 		<div class="col-md-8">
-			<h2>Welcome To Mithun Technologies, Marathahalli, Bengaluru,Karnataka.</h2>
-			<h3>Contact @ +91-9980923226,+91-9980923216</h3>
+			<h2>Welcome To Anand Creative Works, Hyderabad,Telangana.</h2>
+			<h3>Contact @ +91-9030444739 </h3>
 		</div>	
 	</div>
 
 
 	<hr>
 	<footer>
-		<p>&copy; Mithun Technologies 2019</p>
+		<p>&copy; Anand Creative Works 2023</p>
 	</footer>
 </div>
 
