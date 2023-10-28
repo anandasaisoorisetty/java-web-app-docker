@@ -1,6 +1,9 @@
+# Use the official Tomcat image as the base image
 FROM tomcat:8.0.20-jre8
-# Dummy text to test 
+
+# Copy the Java web application WAR file into the Tomcat webapps directory
 COPY target/java-web-app*.war /usr/local/tomcat/webapps/java-web-app.war
+
 
 # # Use Nginx as the base image
 # FROM nginx:latest
