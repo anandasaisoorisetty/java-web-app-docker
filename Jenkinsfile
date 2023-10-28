@@ -2,11 +2,6 @@ pipeline {
     agent any
 
     stages {
-        stage('Cleanup WorkSpace') {
-            steps {
-                cleanWs()
-            }
-        }
         stage('Checkout from SCM') {
             steps {
                git url: 'https://github.com/anandasaisoorisetty/java-web-app-docker.git',branch: 'master'
