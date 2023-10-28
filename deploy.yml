@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: tomcat-deployment  # You can change the name to something more suitable
+  name: tomcat-deployment  
   labels:
-    app: tomcat  # Update the app label
+    app: tomcat 
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: tomcat  # Update the app label
+      app: tomcat 
   template:
     metadata:
       labels:
-        app: tomcat  # Update the app label
+        app: tomcat  
     spec:
       containers:
-        - name: tomcat-container  # Update the container name
-          image: anandasaisoorisetty/java-web-app-docker:Java-Project-buildNumber  # Update the image name
+        - name: tomcat-container 
+          image: anandasaisoorisetty/java-web-app-docker:Java-Project-buildNumber  
           ports:
-            - containerPort: 8080  # Update the containerPort to match your Tomcat application's port
+            - containerPort: 8080 
