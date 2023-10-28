@@ -38,5 +38,15 @@ pipeline {
                 }
             }
         }
+        stage('Minikube Deploy') {
+            steps {
+                sh '''
+                    minikube start 
+                    sed "s/buildNumber/${BUILD_NUMBER}/g" deploy.yml > deploy-new.yml
+                    kubectl apply -f deploy-new.yml
+                    kubectl apply -f svc.yml
+                '''
+            }
+        }
     }
 }
