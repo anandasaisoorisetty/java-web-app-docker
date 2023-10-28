@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Checkout from SCM') {
             steps {
-               git url: 'https://github.com/anandasaisoorisetty/java-web-app-docker.git',branch: 'master'
+               git url: 'https://github.com/anandasaisoorisetty/java-web-app-docker.git',branch: 'main'
             }
         }   
         stage("Maven Clean Package"){
