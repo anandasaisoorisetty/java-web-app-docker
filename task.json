@@ -24,7 +24,7 @@
     ],
     "networkMode": "awsvpc",
     "cpu": "256",
-    "executionRoleArn": "arn:aws:iam::971076122335:role/ecs-task-role-new-demo",
+    "executionRoleArn": "arn:aws:iam::771070158678:role/ecsrole",
     "family": "demo-new",
     "memory": "1024",
     "requiresCompatibilities": [ 
