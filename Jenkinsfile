@@ -27,15 +27,6 @@ pipeline {
             }
         }
 
-        stage('Docker Login and Push Image to Docker Hub') {
-            steps {
-                script {
-                    // Build Docker image
-                    sh "docker push  anandasaisoorisetty/java-web-app-docker:Java-Project-${BUILD_NUMBER} "
-                }
-            }
-        }
-
         // stage('Image Scan') {
         //     steps {
         //         sh '''
@@ -44,6 +35,20 @@ pipeline {
         //             bash image_scan-new.sh
 	    //         '''
         // }   
+
+        stage('Docker Login and Push Image to Docker Hub') {
+            when {
+                expression {
+                    currentBuild.resultIsBetterOrEqualTo('SUCCESS') // Only execute if the build result is SUCCESS
+                }
+            }
+            steps {
+                script {
+                    // Build Docker image
+                    sh "docker push  anandasaisoorisetty/java-web-app-docker:Java-Project-${BUILD_NUMBER} "
+                }
+            }
+        }
 
         // stage('EKS Deploy') {
         //     steps {
