@@ -1,6 +1,6 @@
 #!/bin/bash
-SERVICE_NAME="demo-java"
-CLUSTER_NAME="demo-java"
+SERVICE_NAME="demo"
+CLUSTER_NAME="demo"
 AWS_REGION="us-east-1"
 # export AWS_PROFILE=default
 
