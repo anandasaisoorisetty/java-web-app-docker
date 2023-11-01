@@ -28,12 +28,5 @@
     "memory": "1024",
     "requiresCompatibilities": [ 
         "FARGATE" 
-    ],
-    "networkConfiguration": {
-        "awsvpcConfiguration": {
-            "subnets": ["subnet-07c7254757df29f29", "subnet-02c95ba777ff1dd20"],
-            "securityGroups": ["sg-03ac8a3f494dd370a"],
-            "assignPublicIp": "ENABLED"
-        }
-    }
+    ]
 }
