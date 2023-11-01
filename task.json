@@ -6,12 +6,12 @@
             "logConfiguration": { 
                 "logDriver": "awslogs",
                 "options": { 
-                    "awslogs-group" : "/ecs/demo",
+                    "awslogs-group" : "/ecs/demo-java",
                     "awslogs-region": "us-east-1",
                     "awslogs-stream-prefix": "ecs"
                 }
             },
-            "name": "httpd",
+            "name": "tomcat-container",
             "portMappings": [ 
                 { 
                     "containerPort": 80,
