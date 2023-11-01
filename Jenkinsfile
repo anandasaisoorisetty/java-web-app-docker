@@ -7,6 +7,7 @@ pipeline {
                git url: 'https://github.com/anandasaisoorisetty/java-web-app-docker.git',branch: 'main'
             }
         }   
+
         stage("Maven Clean Package"){
             steps {
                 script {
@@ -16,6 +17,7 @@ pipeline {
                 }
             }
         }
+
          stage('Build Docker Image') {
             steps {
                 script {
@@ -33,6 +35,16 @@ pipeline {
                 }
             }
         }
+
+        // stage('Image Scan') {
+        //     steps {
+        //         sh '''
+        //             sed "s/BUILD_NUMBER/$1/g" image_scan.sh > image_scan-new.sh
+        //             chmod +x image_scan-new.sh
+        //             bash image_scan-new.sh
+	    //         '''
+        // }   
+
         // stage('EKS Deploy') {
         //     steps {
         //         sh '''
@@ -43,7 +55,7 @@ pipeline {
         //         '''
         //     }
         // }
-         stage('ecs deploy') {
+         stage('ECS Deploy') {
             steps {
                  sh '''
                  chmod +x changebuildnumber.sh
